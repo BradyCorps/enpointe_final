@@ -1,0 +1,28 @@
+{
+	"posts": [
+		{
+			"id": "0",
+			"name": "First EnPointe",
+			"slug": "first-to-enpointe",
+
+			"description": "Intro the EnPointe. ipsum dolor sit amet consectetur adipisicing elit. Voluptates, asperiores saepe. Minus temporibus at quod rerum repellendus saepe consequatur iure",
+			"image": "/images/Header-bg.jpg"
+		},
+		{
+			"id": "1",
+			"name": "Second Enpointe Post",
+			"slug": "second-enpointe-post",
+
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, asperiores saepe. Minus temporibus at quod rerum repellendus saepe consequatur iure",
+			"image": "/images/example-2.jpeg"
+		},
+		{
+			"id": "2",
+			"name": "Third Enpointe Post",
+			"slug": "third-enpointe-post",
+
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, asperiores saepe. Minus temporibus at quod rerum repellendus saepe consequatur iure",
+			"image": "/images/example.jpeg"
+		}
+	]
+}
