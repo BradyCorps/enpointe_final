@@ -1,0 +1,52 @@
+.title-h1 {
+	font-size: 80px;
+	transform: skew(-8deg);
+	color: $secondary;
+	margin: 0;
+	width: 100%;
+}
+
+.title-description-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	height: 100%;
+}
+
+.date-align {
+	display: none;
+}
+
+p {
+	color: $offwhite;
+	margin-bottom: 2rem;
+
+	font-weight: 200;
+}
+
+.en {
+	opacity: 25%;
+	font-weight: 600;
+}
+
+@include md {
+	.title-h1 {
+		font-weight: 300;
+		font-size: 140px;
+	}
+
+	.title-description-wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		justify-content: center;
+
+		p {
+			margin-left: 4rem;
+		}
+	}
+	.date-align {
+		display: block;
+	}
+}

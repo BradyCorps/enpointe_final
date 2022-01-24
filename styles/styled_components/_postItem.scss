@@ -1,0 +1,152 @@
+@include xs {
+	.container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.post {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+		height: 100vh;
+		background-color: gray;
+	}
+
+	.postItem-description-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		.title-name-size {
+			width: 100%;
+		}
+
+		.read-more-align {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+
+			margin-left: 0rem;
+			p {
+				color: $offwhite;
+				font-weight: 200;
+			}
+		}
+	}
+
+	.img-gradient-overlay {
+		background-image: linear-gradient(
+			to bottom,
+			rgba(32, 37, 41, 0.67),
+			rgb(20, 23, 26)
+		);
+		height: 100%;
+		width: 100%;
+		position: absolute;
+	}
+
+	.img-solid-overlay {
+		background-color: $primaryTransparent;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+	}
+
+	.img-container {
+		height: 100%;
+		width: 100vw;
+
+		.img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.info-wrapper {
+		position: absolute;
+		left: 12px;
+		display: flex;
+
+		margin-bottom: 3rem;
+		z-index: 1;
+	}
+}
+
+@include lg {
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.post {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+		height: 100vh;
+		background-color: gray;
+	}
+
+	.postItem-description-wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		.title-name-size {
+			width: 55vw;
+		}
+
+		.read-more-align {
+			display: flex;
+			flex-direction: column;
+
+			margin-left: 4rem;
+			p {
+				color: $offwhite;
+				font-weight: 200;
+			}
+		}
+	}
+
+	.img-gradient-overlay {
+		background-image: linear-gradient(
+			to bottom,
+			rgba(32, 37, 41, 0.67),
+			rgb(20, 23, 26)
+		);
+		height: 100%;
+		width: 100%;
+		position: absolute;
+	}
+
+	.img-solid-overlay {
+		background-color: $primaryTransparent;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+	}
+
+	.img-container {
+		height: 100%;
+		width: 100vw;
+
+		.img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.info-wrapper {
+		position: absolute;
+		left: 12px;
+		display: flex;
+		align-self: flex-end;
+		margin-bottom: 3rem;
+		z-index: 1;
+	}
+}

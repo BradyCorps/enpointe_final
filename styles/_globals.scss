@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Lato, sans-serif;
+	background-color: $offwhite;
+}
+a {
+	color: $secondary;
+	text-decoration: none;
+	transition: 0.5s ease-in-out;
+
+	&:hover {
+		color: $offwhite;
+	}
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+@include xs {
+	h1 {
+		margin: 0;
+		color: $offwhite;
+		font-weight: 300;
+		font-size: 2.5rem;
+	}
+
+	h2 {
+		color: $primary;
+		font-weight: 400;
+		font-size: 2rem;
+	}
+
+	h3 {
+		color: $primary;
+		font-weight: 600;
+		font-size: 1.8rem;
+		text-transform: uppercase;
+	}
+
+	h4 {
+		color: $offwhite;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		margin: 0;
+
+		&.date-align {
+			margin-left: 5px;
+		}
+	}
+
+	h5 {
+		color: $primary;
+		font-size: 1rem;
+	}
+
+	h6 {
+		font-size: 0.8rem;
+		color: $captions;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 1rem;
+	}
+}
+
+@include lg {
+	h1 {
+		margin: 0;
+		color: $offwhite;
+		font-weight: 300;
+		font-size: 5rem;
+	}
+
+	h2 {
+		color: $primary;
+		font-weight: 400;
+		font-size: 2rem;
+	}
+
+	h3 {
+		color: $primary;
+		font-weight: 600;
+		font-size: 1.5rem;
+		text-transform: uppercase;
+	}
+
+	h4 {
+		color: $offwhite;
+		font-size: 1rem;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		margin: 0;
+
+		&.date-align {
+			margin-left: 5px;
+		}
+	}
+
+	h5 {
+		color: $primary;
+	}
+
+	h6 {
+		color: $captions;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 1rem;
+	}
+}

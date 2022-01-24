@@ -1,0 +1,11 @@
+@import './variables';
+@import './breakpoints';
+@import './globals';
+
+// Components
+@import './styled_components/Navbar/header';
+@import './styled_components/footer';
+@import './styled_components//postItem';
+@import './styled_components/titleCard';
+@import './styled_components/Navbar/burger';
+@import './styled_components/button';
