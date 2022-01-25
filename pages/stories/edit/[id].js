@@ -5,12 +5,15 @@ import { ToastContainer, toast } from 'react-toastify';
 import { API_URL } from '@/config/index';
 import Layout from '@/components/Layout';
 
-const AddPostPage = () => {
+const editPostPage = ({ pst }) => {
 	const [values, setValues] = useState({
-		title: '',
-		description: '',
-		body: '',
+		title: pst.title,
+		description: pst.description,
+		body: pst.body,
 	});
+	const [imagePreview, setImagePreview] = useState(
+		pst.mainImage ? pst.mainImage.formats.thumbnail.url : null
+	);
 
 	const router = useRouter();
 
@@ -25,8 +28,8 @@ const AddPostPage = () => {
 			toast.error('Please Fill in Fields');
 		}
 
-		const res = await fetch(`${API_URL}/posts`, {
-			method: 'POST',
+		const res = await fetch(`${API_URL}/posts/${pst.id}`, {
+			method: 'PUT',
 			headers: {
 				'Content-Type': 'application/json',
 			},
@@ -50,7 +53,7 @@ const AddPostPage = () => {
 	};
 	return (
 		<Layout title='Add New Post'>
-			<h2>Add Post</h2>
+			<h2>Edit Post</h2>
 			<ToastContainer />
 			<Link href='/'>
 				<button>Go Back</button>
@@ -88,10 +91,30 @@ const AddPostPage = () => {
 						onChange={handleInputChange}
 					/>
 				</div>
-				<input type='submit' value='Add Post' className='btn'></input>
+				<input type='submit' value='Submit Edited Post' className='btn'></input>
 			</form>
+			<h2>Story Image</h2>
+			{imagePreview ? (
+				<img src={imagePreview} alt='Preview' />
+			) : (
+				<div>
+					<h2>No Image Uploaded</h2>
+				</div>
+			)}
+			<button>Set Image</button>
 		</Layout>
 	);
 };
 
-export default AddPostPage;
+export async function getServerSideProps({ params: { id } }) {
+	const res = await fetch(`${API_URL}/posts/${id}`);
+	const pst = await res.json();
+
+	return {
+		props: {
+			pst,
+		},
+	};
+}
+
+export default editPostPage;

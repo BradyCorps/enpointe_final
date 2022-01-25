@@ -2,6 +2,7 @@ import Layout from '@/components/Layout';
 import PostItem from '@/components/PostItem';
 import TitleCard from '@/components/TitleCard';
 import { API_URL } from '@/config/index';
+
 import Head from 'next/head';
 
 const PostPage = ({ posts }) => {

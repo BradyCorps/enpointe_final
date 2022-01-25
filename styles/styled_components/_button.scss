@@ -41,4 +41,46 @@ button {
 	button {
 		font-size: 1.2rem;
 	}
+	.btn {
+		font-size: 1.2rem;
+	}
+}
+
+.btn {
+	position: relative;
+	border: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 0.5rem;
+	transition: color 0.5s, transform 0.4s, background-color 1s, border 1s,
+		padding 0.7s cubic-bezier(0.62, 0.1, 0.1, 0.34);
+	outline: none;
+	border-radius: 0px;
+	margin: 0.4rem 0 0 0;
+	padding: 0.4rem 0.8rem;
+	border: 0px solid transparent;
+	background: $secondary;
+	color: $offwhite;
+	cursor: pointer;
+	font-family: lato, sans-serif;
+	font-weight: 600;
+
+	a {
+		color: $offwhite;
+	}
+
+	&:active {
+		transform: translateY(3px);
+	}
+	&::after,
+	&::before {
+		border-radius: 3px;
+	}
+	&:hover {
+		background: $secondary;
+		border-radius: 0.5px;
+		border: 3px solid lighten($primary, 2);
+		box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2);
+		padding: 0.7rem 1.05rem;
+	}
 }

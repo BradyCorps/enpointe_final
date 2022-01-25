@@ -1,17 +1,30 @@
 import Link from 'next/link';
 import Layout from '@/components/Layout';
-import TitleCard from '@/components/TitleCard';
+import { ToastContainer, toast } from 'react-toastify';
 import { API_URL } from '@/config/index';
+import { useRouter } from 'next/router';
 
 const StoryPage = ({ pst }) => {
-	const deleteEvent = e => {
-		console.log('delete');
+	const router = useRouter();
+	const deleteEvent = async e => {
+		if (confirm('Are you Sure?')) {
+			const res = await fetch(`${API_URL}/posts/${pst.id}`, {
+				method: 'DELETE',
+			});
+			const data = await res.json();
+
+			if (!res.ok) {
+				toast.error(data.message);
+			} else {
+				router.push('/stories');
+			}
+		}
 	};
 	return (
 		<div>
 			<Layout>
-				<TitleCard />
-				<h2>{pst.name}</h2>
+				<h2>{pst.title}</h2>
+				<ToastContainer />
 				<h3>{pst.description}</h3>
 				<Link href={`/stories/edit/${pst.id}`}>
 					<button>Edit Story</button>
