@@ -1,0 +1,39 @@
+.form-add label {
+	display: block;
+}
+
+.form-add input {
+	width: 100%;
+	height: 40px;
+	padding: 5px;
+}
+
+.form-add textarea {
+	width: 100%;
+	height: 150px;
+}
+
+.form-add input[type='submit'] {
+	display: block;
+	width: 100%;
+	margin: 20px 0 30px;
+}
+
+.form-add .file {
+	border: 1px #ccc solid;
+	background-color: #f4f4f4;
+	padding: 10px;
+}
+
+.grid-add {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+	.grid-add {
+		grid-template-columns: 1fr;
+	}
+}

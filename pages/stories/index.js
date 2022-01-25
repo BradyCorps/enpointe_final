@@ -4,7 +4,7 @@ import TitleCard from '@/components/TitleCard';
 import { API_URL } from '@/config/index';
 import Head from 'next/head';
 
-const HomePage = ({ posts }) => {
+const PostPage = ({ posts }) => {
 	return (
 		<div>
 			<Layout>
@@ -18,8 +18,6 @@ const HomePage = ({ posts }) => {
 	);
 };
 
-export default HomePage;
-
 export async function getStaticProps() {
 	const res = await fetch(`${API_URL}/posts`);
 	const posts = await res.json();
@@ -29,3 +27,5 @@ export async function getStaticProps() {
 		revalidate: 1,
 	};
 }
+
+export default PostPage;

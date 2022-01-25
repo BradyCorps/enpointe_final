@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
+import Search from '@/components/Search';
 
 export default function Navbar() {
 	const [sidebar, setSidebar] = useState(false);
@@ -14,12 +15,12 @@ export default function Navbar() {
 					<span className='line'></span>
 				</div>
 			</div>
+			<Search />
+			<Link href='/stories/add'>
+				<button>Add Page</button>
+			</Link>
 			<nav className={sidebar ? 'menu-icon-checkbox checked' : 'nav-menu'}>
 				<ul className='li-wrapper'>
-					<li>Test</li>
-					<li>Test</li>
-					<li>Test</li>
-					<li>Test</li>
 					<li>Test</li>
 				</ul>
 			</nav>

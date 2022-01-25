@@ -13,8 +13,7 @@ const Layout = ({ title, keywords, description, children }) => {
 				<meta name='keyword' content='{keywords}' />
 			</Head>
 			<Header />
-
-			{children}
+			<div className='body-spacing'>{children}</div>
 			<Footer />
 		</div>
 	);
