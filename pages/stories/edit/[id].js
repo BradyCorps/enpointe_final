@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { ToastContainer, toast } from 'react-toastify';
 import { API_URL } from '@/config/index';
 import Layout from '@/components/Layout';
+import Modal from '@/components/Modal';
+import ImageUpload from '@/components/ImageUpload';
 
 const editPostPage = ({ pst }) => {
 	const [values, setValues] = useState({
@@ -14,6 +16,8 @@ const editPostPage = ({ pst }) => {
 	const [imagePreview, setImagePreview] = useState(
 		pst.mainImage ? pst.mainImage.formats.thumbnail.url : null
 	);
+
+	const [showModal, setShowModal] = useState(false);
 
 	const router = useRouter();
 
@@ -45,11 +49,17 @@ const editPostPage = ({ pst }) => {
 	};
 
 	const handleInputChange = e => {
-		const { name, value } = e.target;
+		const { title, value } = e.target;
 		setValues({
 			...values,
-			[name]: value,
+			[title]: value,
 		});
+	};
+	const imageUploaded = async e => {
+		const res = await fetch(`${API_URL}/posts/${pst.id}`);
+		const data = await res.json();
+		setImagePreview(data.mainImage.formats.thumbnail.url);
+		setShowModal(false);
 	};
 	return (
 		<Layout title='Add New Post'>
@@ -101,7 +111,12 @@ const editPostPage = ({ pst }) => {
 					<h2>No Image Uploaded</h2>
 				</div>
 			)}
-			<button>Set Image</button>
+			<div>
+				<button onClick={() => setShowModal(true)}>Set Image</button>
+			</div>
+			<Modal show={showModal} onClose={() => setShowModal(false)}>
+				<ImageUpload pstId={pst.id} imageUploaded={imageUploaded} />
+			</Modal>
 		</Layout>
 	);
 };
