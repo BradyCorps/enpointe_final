@@ -6,30 +6,14 @@ import { useRouter } from 'next/router';
 
 const StoryPage = ({ pst }) => {
 	const router = useRouter();
-	const deleteEvent = async e => {
-		if (confirm('Are you Sure?')) {
-			const res = await fetch(`${API_URL}/posts/${pst.id}`, {
-				method: 'DELETE',
-			});
-			const data = await res.json();
 
-			if (!res.ok) {
-				toast.error(data.message);
-			} else {
-				router.push('/stories');
-			}
-		}
-	};
 	return (
 		<div>
 			<Layout>
 				<h2>{pst.title}</h2>
 				<ToastContainer />
 				<h3>{pst.description}</h3>
-				<Link href={`/stories/edit/${pst.id}`}>
-					<button>Edit Story</button>
-				</Link>
-				<button onClick={deleteEvent}>Delete Event</button>
+
 				<Link href='/stories'>
 					<button>See All Stories</button>
 				</Link>

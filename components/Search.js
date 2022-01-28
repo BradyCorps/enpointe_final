@@ -20,6 +20,7 @@ const Search = () => {
 					placeholder='Search Posts'
 				/>
 			</form>
+			<button onClick={handleSubmit}>Search</button>
 		</div>
 	);
 };

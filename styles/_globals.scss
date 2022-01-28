@@ -6,6 +6,7 @@ body {
 	margin: 0;
 	font-family: Lato, sans-serif;
 	background-color: $offwhite;
+	overflow-x: hidden;
 }
 
 .body-spacing {
@@ -42,10 +43,11 @@ ul {
 	}
 
 	h3 {
-		color: $primary;
+		color: $secondary;
 		font-weight: 600;
 		font-size: 1.8rem;
 		text-transform: uppercase;
+		letter-spacing: 3px;
 	}
 
 	h4 {
@@ -92,7 +94,7 @@ ul {
 	}
 
 	h3 {
-		color: $primary;
+		color: $secondary;
 		font-weight: 600;
 		font-size: 1.5rem;
 		text-transform: uppercase;

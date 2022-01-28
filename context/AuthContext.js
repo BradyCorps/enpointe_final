@@ -1,12 +1,15 @@
 import { createContext, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { API_URL } from '@/config/index';
+import { NEXT_URL } from '@/config/index';
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
 	const [user, setUser] = useState(null);
 	const [error, setError] = useState(null);
+	const router = useRouter();
+
+	useEffect(() => checkUserLoggedIn(), []);
 
 	// Register
 	const register = async user => {
@@ -15,17 +18,50 @@ export const AuthProvider = ({ children }) => {
 
 	// Login
 	const login = async ({ email: identifier, password }) => {
-		console.log({ identifier, password });
+		const res = await fetch(`${NEXT_URL}/api/login`, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				identifier,
+				password,
+			}),
+		});
+
+		const data = await res.json();
+
+		if (res.ok) {
+			setUser(data.user);
+		} else {
+			setError(data.message);
+			setError(null);
+		}
 	};
 
 	// Logout
 	const logout = async () => {
-		console.log('Logout');
+		const res = await fetch(`${NEXT_URL}/api/logout`, {
+			method: 'POST',
+		});
+		if (res.ok) {
+			setUser(null);
+			router.push('/');
+		}
 	};
+
 	// Check is User is Login - Persist
 
 	const checkUserLoggedIn = async user => {
-		console.log('check');
+		const res = await fetch(`${NEXT_URL}/api/user`);
+		const data = await res.json();
+
+		if (res.ok) {
+			setUser(data.user);
+			router.push('/account/dashboard');
+		} else {
+			setUser(null);
+		}
 	};
 
 	return (

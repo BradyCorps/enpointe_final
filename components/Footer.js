@@ -1,3 +1,5 @@
+import Search from '@/components/Search';
+
 const Footer = () => {
 	return (
 		<div>
@@ -19,14 +21,14 @@ const Footer = () => {
 						</p>
 						<div className='email'>
 							<a target='_blank' href='mailto:jmagnifico@rwb.org'>
-								<button className='material-effect'>Email Us</button>
+								<button className='main-button'>Email Us</button>
 							</a>
 						</div>
 					</div>
 
 					<div className='second-section'>
 						<div className='logo-container'>
-							<h2>Follow Us</h2>
+							<h3>Follow Us</h3>
 							<a
 								href='https://www.instagram.com/rwballet/?hl=en'
 								target='_blank'>
@@ -55,15 +57,15 @@ const Footer = () => {
 							</a>
 						</div>
 						<div className='box-office'>
-							<h2>Box Office</h2>
+							<h3>Box Office</h3>
 							<p>204-956-2792</p>
-							<button className='material-effect'>
-								<a href='mailto:customerservice@rwb.org'>
-									customerservice@rwb.org
-								</a>
-							</button>
+
+							<a href='mailto:customerservice@rwb.org'>
+								customerservice@rwb.org
+							</a>
 						</div>
 					</div>
+					<Search />
 
 					<div className='third-section'>
 						<div className='third-wrapper'>

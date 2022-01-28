@@ -1,6 +1,31 @@
-.search input {
-	width: 250px;
-	height: 40px;
-	padding: 5px;
-	border: 1px #777 solid;
+.search {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	input {
+		width: 250px;
+		height: 30px;
+		padding: 5px;
+		color: $offwhite;
+		border: none;
+		background-color: lighten($primary, 10%);
+		outline: none;
+	}
+	button {
+		border: none;
+		color: $offwhite;
+		background-color: $secondary;
+		height: 40px;
+		margin: 0;
+		transition: 0.3s ease-in-out;
+		text-transform: uppercase;
+		letter-spacing: 0.1rem;
+		font-weight: 600;
+		padding: 0.4rem 0.8rem;
+		&:hover {
+			background-color: $offwhite;
+			color: $primary;
+		}
+	}
 }

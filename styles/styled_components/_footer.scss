@@ -65,13 +65,14 @@
 				.logo-hover {
 					cursor: pointer;
 					fill: $secondary;
-					height: 14px;
-					width: 14px;
+					height: 18px;
+					width: 18px;
 					transition: fill 0.5s, height 0.3s, width 0.3s;
+					padding: 0rem 0.2rem;
 
 					&:hover {
-						height: 30px;
-						width: 30px;
+						height: 20px;
+						width: 20px;
 						fill: $offwhite;
 					}
 				}

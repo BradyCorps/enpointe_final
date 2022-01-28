@@ -2,12 +2,13 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { ToastContainer, toast } from 'react-toastify';
+import { parseCookies } from '@/helpers/index';
 import { API_URL } from '@/config/index';
 import Layout from '@/components/Layout';
 import Modal from '@/components/Modal';
 import ImageUpload from '@/components/ImageUpload';
 
-const editPostPage = ({ pst }) => {
+const editPostPage = ({ pst, token }) => {
 	const [values, setValues] = useState({
 		title: pst.title,
 		description: pst.description,
@@ -36,12 +37,16 @@ const editPostPage = ({ pst }) => {
 			method: 'PUT',
 			headers: {
 				'Content-Type': 'application/json',
+				'Authorization': `Bearer ${token}`,
 			},
 			body: JSON.stringify(values),
 		});
 
 		if (!res.ok) {
-			toast.error('Something Went Wrong');
+			if (res.status === 403 || res.status === 401) {
+				toast.error('Unauthorized');
+			}
+			return;
 		} else {
 			const pst = await res.json();
 			router.push(`/stories/${pst.slug}`);
@@ -49,11 +54,8 @@ const editPostPage = ({ pst }) => {
 	};
 
 	const handleInputChange = e => {
-		const { title, value } = e.target;
-		setValues({
-			...values,
-			[title]: value,
-		});
+		const { name, value } = e.target;
+		setValues({ ...values, [name]: value });
 	};
 	const imageUploaded = async e => {
 		const res = await fetch(`${API_URL}/posts/${pst.id}`);
@@ -115,19 +117,25 @@ const editPostPage = ({ pst }) => {
 				<button onClick={() => setShowModal(true)}>Set Image</button>
 			</div>
 			<Modal show={showModal} onClose={() => setShowModal(false)}>
-				<ImageUpload pstId={pst.id} imageUploaded={imageUploaded} />
+				<ImageUpload
+					pstId={pst.id}
+					imageUploaded={imageUploaded}
+					token={token}
+				/>
 			</Modal>
 		</Layout>
 	);
 };
 
-export async function getServerSideProps({ params: { id } }) {
+export async function getServerSideProps({ params: { id }, req }) {
+	const { token } = parseCookies(req);
 	const res = await fetch(`${API_URL}/posts/${id}`);
 	const pst = await res.json();
 
 	return {
 		props: {
 			pst,
+			token,
 		},
 	};
 }

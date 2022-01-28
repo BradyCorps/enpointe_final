@@ -1,3 +1,4 @@
+import { parseCookies } from '@/helpers/index';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -5,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { API_URL } from '@/config/index';
 import Layout from '@/components/Layout';
 
-const AddPostPage = () => {
+const AddPostPage = ({ token }) => {
 	const [values, setValues] = useState({
 		title: '',
 		description: '',
@@ -29,11 +30,16 @@ const AddPostPage = () => {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
+				'Authorization': `Bearer ${token}`,
 			},
 			body: JSON.stringify(values),
 		});
 
 		if (!res.ok) {
+			if (res.status === 403 || res.status === 401) {
+				toast.error('No Token Included');
+				return;
+			}
 			toast.error('Something Went Wrong');
 		} else {
 			const pst = await res.json();
@@ -93,5 +99,15 @@ const AddPostPage = () => {
 		</Layout>
 	);
 };
+
+export async function getServerSideProps({ req }) {
+	const { token } = parseCookies(req);
+
+	return {
+		props: {
+			token,
+		},
+	};
+}
 
 export default AddPostPage;

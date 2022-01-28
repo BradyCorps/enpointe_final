@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { API_URL } from '../config';
 
-const ImageUpload = ({ pstId, imageUploaded }) => {
+const ImageUpload = ({ pstId, imageUploaded, token }) => {
 	const [image, setImage] = useState(null);
 
 	const handleSubmit = async e => {
@@ -14,6 +14,9 @@ const ImageUpload = ({ pstId, imageUploaded }) => {
 
 		const res = await fetch(`${API_URL}/upload`, {
 			method: 'POST',
+			headers: {
+				Authorization: `Bearer ${token}`,
+			},
 			body: formData,
 		});
 

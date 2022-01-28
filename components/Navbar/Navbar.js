@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React, { useState, useContext } from 'react';
 import AuthContext from '@/context/AuthContext';
-import Search from '@/components/Search';
 
 export default function Navbar() {
 	const [sidebar, setSidebar] = useState(false);
@@ -18,7 +17,7 @@ export default function Navbar() {
 					<span className='line'></span>
 				</div>
 			</div>
-			<Search />
+
 			{user ? (
 				// If Logged In
 				<>
@@ -38,15 +37,13 @@ export default function Navbar() {
 				<>
 					{' '}
 					<Link href='/account/login'>
-						<button>Login</button>
+						<button className='main-button'>Login</button>
 					</Link>
 				</>
 			)}
 
 			<nav className={sidebar ? 'menu-icon-checkbox checked' : 'nav-menu'}>
-				<ul className='li-wrapper'>
-					<li>Test</li>
-				</ul>
+				<ul className='li-wrapper'></ul>
 			</nav>
 		</div>
 	);
