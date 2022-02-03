@@ -2,14 +2,14 @@ const TitleCard = () => {
 	return (
 		<div className='container'>
 			<div className='post'>
-				<div className='info-wrapper'>
+				<div className='title-info-wrapper'>
 					<div className='info'>
 						<div className='text-wrapper'>
 							<div className='title-description-wrapper'>
 								<h1 className='title-h1'>
 									<span className='en'>En</span>Pointe.
 								</h1>
-								<p>
+								<p className='title-card-description'>
 									Lorem ipsum dolor sit amet consectetur adipisicing elit.
 									Debitis aperiam molestiae nostrum vitae eveniet vero
 									temporibus quidem architecto illo at molestias, voluptates
@@ -18,7 +18,7 @@ const TitleCard = () => {
 									molestias distinctio laborum quidem.
 								</p>
 							</div>
-							<h4 className='date-align'>January 2022</h4>
+							<h4>February 2022</h4>
 						</div>
 					</div>
 				</div>

@@ -1,4 +1,5 @@
 import cookie from 'cookie';
+import { useRouter } from 'next/router';
 import { API_URL } from '@/config/index';
 
 export default async (req, res) => {

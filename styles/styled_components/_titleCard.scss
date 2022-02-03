@@ -1,3 +1,7 @@
+.title-card-description {
+	color: $offwhite;
+}
+
 .title-h1 {
 	font-size: 80px;
 	transform: skew(-8deg);
@@ -6,28 +10,19 @@
 	width: 100%;
 }
 
-.title-description-wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	justify-content: center;
-	height: 100%;
-}
-
-.date-align {
-	display: none;
-}
-
-p {
-	color: $offwhite;
-	margin-bottom: 2rem;
-
-	font-weight: 200;
-}
-
 .en {
 	opacity: 25%;
 	font-weight: 600;
+}
+
+.title-info-wrapper {
+	position: absolute;
+	margin-bottom: 3rem;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem;
 }
 
 @include md {
@@ -39,14 +34,12 @@ p {
 	.title-description-wrapper {
 		display: flex;
 		flex-direction: row;
-		align-items: flex-end;
-		justify-content: center;
+		align-items: center;
 
 		p {
-			margin-left: 4rem;
+			margin-top: 3rem;
+			width: 80%;
+			text-align: left;
 		}
-	}
-	.date-align {
-		display: block;
 	}
 }

@@ -1,12 +1,13 @@
 import { ToastContainer, toast } from 'react-toastify';
 import { useState, useEffect, useContext } from 'react';
 import AuthContext from '@/context/AuthContext';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Layout from '@/components/Layout';
 
 const LoginPage = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const router = useRouter();
 
 	const { login, error } = useContext(AuthContext);
 
@@ -16,6 +17,7 @@ const LoginPage = () => {
 		e.preventDefault();
 		login({ email, password });
 	};
+
 	return (
 		<Layout title='Dev Login'>
 			<div className='auth-wrapper'>
@@ -41,7 +43,7 @@ const LoginPage = () => {
 								onChange={e => setPassword(e.target.value)}
 							/>
 						</div>
-						<input type='submit' value='Login' className='btn' />
+						<input type='submit' value='Login' className='auth-button' />
 					</form>
 				</div>
 			</div>

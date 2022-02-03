@@ -9,6 +9,19 @@ body {
 	overflow-x: hidden;
 }
 
+blockquote {
+	margin: 0;
+	font-weight: 100;
+	p {
+		font-size: 1.2rem;
+		font-style: italic;
+	}
+}
+
+p {
+	font-weight: 300;
+}
+
 .body-spacing {
 	margin-top: 80px;
 }

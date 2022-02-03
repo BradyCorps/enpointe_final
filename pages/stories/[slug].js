@@ -4,19 +4,138 @@ import { ToastContainer, toast } from 'react-toastify';
 import { API_URL } from '@/config/index';
 import { useRouter } from 'next/router';
 
-const StoryPage = ({ pst }) => {
+import ReactMarkdown from 'react-markdown';
+
+const StoryPage = ({ posts, pst }) => {
 	const router = useRouter();
 
 	return (
 		<div>
 			<Layout>
-				<h2>{pst.title}</h2>
-				<ToastContainer />
-				<h3>{pst.description}</h3>
+				<div className='container'>
+					<div className='post'>
+						<div className='info-wrapper'>
+							<div className='postItem-description-wrapper'>
+								<div className='title-name-size'>
+									<h1>{pst.title}</h1>
+								</div>
+								<div className='read-more-align'>
+									<p>{pst.description} </p>
+									<div className='link'>
+										<Link href='/stories'>
+											<button className='main-button'>See More Stories</button>
+										</Link>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className='img-container'>
+							<div className='img-solid-overlay'></div>
+							<div className='img-gradient-overlay'></div>
 
-				<Link href='/stories'>
-					<button>See All Stories</button>
-				</Link>
+							<img
+								className='img'
+								src={
+									pst.mainImage
+										? pst.mainImage.formats.large.url
+										: './images/default.png'
+								}
+								alt='Test'
+							/>
+						</div>
+					</div>
+				</div>
+
+				<ToastContainer />
+				<div className='article-container'>
+					<ReactMarkdown>{pst.body}</ReactMarkdown>
+
+					<ReactMarkdown>{pst.paragraph2}</ReactMarkdown>
+					<div className='image-feature-wrapper'>
+						<div className='image-single-caption-wrapper'>
+							<img
+								className='article-feature-image'
+								src={
+									pst.secondFeature
+										? pst.secondFeature.formats.large.url
+										: pst.secondFeature.alternativeText
+								}
+								alt='Second Featured Image'
+							/>
+							<p className='caption'>{pst.secondFeature.caption}</p>
+						</div>
+						<div className='image-single-caption-wrapper'>
+							<img
+								className='article-feature-image'
+								src={
+									pst.thirdFeature
+										? pst.thirdFeature.formats.large.url
+										: './images/default.png'
+								}
+								alt='Third Featured Image'
+							/>
+							<p className='caption'>{pst.thirdFeature.caption}</p>
+						</div>
+					</div>
+
+					<ReactMarkdown>{pst.paragraph3}</ReactMarkdown>
+
+					<ReactMarkdown>{pst.paragraph4}</ReactMarkdown>
+					<div className='image-feature-wrapper'>
+						<div className='image-single-caption-wrapper'>
+							<img
+								className='article-feature-image'
+								src={
+									pst.fourthFeature
+										? pst.fourthFeature.formats.large.url
+										: pst.fourthFeature.alternativeText
+								}
+								alt='Second Featured Image'
+							/>
+							<p className='caption'>{pst.fourthFeature.caption}</p>
+						</div>
+						<div className='image-single-caption-wrapper'>
+							<img
+								className='article-feature-image'
+								src={
+									pst.fifthFeature
+										? pst.fifthFeature.formats.large.url
+										: './images/default.png'
+								}
+								alt=''
+							/>
+							<p className='caption'>{pst.fifthFeature.caption}</p>
+						</div>
+					</div>
+					<ReactMarkdown>{pst.paragraph5}</ReactMarkdown>
+					<ReactMarkdown>{pst.paragraph6}</ReactMarkdown>
+					<div className='image-feature-wrapper'>
+						<div className='image-single-caption-wrapper'>
+							<img
+								className='article-feature-image'
+								src={
+									pst.sixthFeature
+										? pst.sixthFeature.formats.large.url
+										: pst.sixthFeature.alternativeText
+								}
+								alt='Second Featured Image'
+							/>
+							<p className='caption'>{pst.sixthFeature.caption}</p>
+						</div>
+						<div className='image-single-caption-wrapper'>
+							<img
+								className='article-feature-image'
+								src={
+									pst.seventhFeature
+										? pst.seventhFeature.formats.large.url
+										: pst.seventhFeature.alternativeText
+								}
+								alt=''
+							/>
+							<p className='caption'>{pst.seventhFeature.caption}</p>
+						</div>
+					</div>
+				</div>
 			</Layout>
 		</div>
 	);

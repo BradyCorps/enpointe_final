@@ -10,41 +10,44 @@ export default function Navbar() {
 	const { user, logout } = useContext(AuthContext);
 	return (
 		<div className='nav-wrapper'>
-			<div className='menu-icon'>
-				<input className='menu-icon-checkbox' type='checkbox' />
-				<div className='span-wrapper' onClick={showSidebar}>
-					<span className='line'></span>
-					<span className='line'></span>
+			<div className='menu-wrapper'>
+				<div className='menu-icon'>
+					<input className='menu-icon-checkbox' type='checkbox' />
+					<div className='span-wrapper' onClick={showSidebar}>
+						<span className='line'></span>
+						<span className='line'></span>
+					</div>
+				</div>
+				<div className='authentication'>
+					{user ? (
+						// If Logged In
+						<>
+							{' '}
+							<Link href='/stories/add'>
+								<button className='auth-button'>Add Page</button>
+							</Link>
+							<Link href='/account/dashboard'>
+								<button className='auth-button'>Dashboard</button>
+							</Link>
+							<button className='auth-button' onClick={() => logout()}>
+								Logout
+							</button>
+						</>
+					) : (
+						// If Logged Out
+						<>
+							{' '}
+							<Link href='/account/login'>
+								<button className='auth-button'>Login</button>
+							</Link>
+						</>
+					)}
 				</div>
 			</div>
 
-			{user ? (
-				// If Logged In
-				<>
-					{' '}
-					<Link href='/stories/add'>
-						<button>Add Page</button>
-					</Link>
-					<Link href='/account/dashboard'>
-						<button>Dashboard</button>
-					</Link>
-					<div>
-						<button onClick={() => logout()}>Logout</button>
-					</div>
-				</>
-			) : (
-				// If Logged Out
-				<>
-					{' '}
-					<Link href='/account/login'>
-						<button className='main-button'>Login</button>
-					</Link>
-				</>
-			)}
-
-			<nav className={sidebar ? 'menu-icon-checkbox checked' : 'nav-menu'}>
+			{/* <nav className={sidebar ? 'menu-icon-checkbox checked' : 'nav-menu'}>
 				<ul className='li-wrapper'></ul>
-			</nav>
+			</nav> */}
 		</div>
 	);
 }

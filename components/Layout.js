@@ -1,10 +1,16 @@
 import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import Preloader from './Preloader';
 import Footer from './Footer';
 import Header from './Header';
 
-// import Showcase from './Showcase';
-
 const Layout = ({ title, keywords, description, children }) => {
+	const [loading, setLoading] = useState(false);
+
+	useEffect(() => {
+		setTimeout(() => setLoading(true), 8000);
+	}, []);
+
 	return (
 		<div>
 			<Head>
@@ -12,9 +18,19 @@ const Layout = ({ title, keywords, description, children }) => {
 				<meta name='description' content='{description}' />
 				<meta name='keyword' content='{keywords}' />
 			</Head>
-			<Header />
-			<div className='body-spacing'>{children}</div>
-			<Footer />
+			{loading === true ? (
+				<>
+					<Header />
+
+					<div className='body-spacing'>{children}</div>
+					<Footer />
+				</>
+			) : (
+				<>
+					<Header />
+					<Preloader />
+				</>
+			)}
 		</div>
 	);
 };

@@ -1,5 +1,4 @@
 .main-button {
-	position: relative;
 	border: none;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -34,6 +33,28 @@
 		border: 3px solid lighten($primary, 2);
 		box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2);
 		padding: 0.7rem 1.05rem;
+	}
+}
+
+.auth-button {
+	border: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 0.5rem;
+	transition: color 0.5s, transform 0.4s, background-color 1s;
+	outline: none;
+	margin-right: 0.2rem;
+	border-radius: 0px;
+	padding: 0.4rem 0.8rem;
+	border: 0px solid transparent;
+	background: $secondary;
+	color: $offwhite;
+	cursor: pointer;
+
+	&:hover {
+		background-color: lighten($primary, 2);
+		border-radius: 0.5px;
+		color: $offwhite;
 	}
 }
 

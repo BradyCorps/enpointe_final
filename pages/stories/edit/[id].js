@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
+
 import { ToastContainer, toast } from 'react-toastify';
 import { parseCookies } from '@/helpers/index';
 import { API_URL } from '@/config/index';
@@ -67,9 +67,14 @@ const editPostPage = ({ pst, token }) => {
 		<Layout title='Add New Post'>
 			<h2>Edit Post</h2>
 			<ToastContainer />
-			<Link href='/'>
-				<button>Go Back</button>
-			</Link>
+
+			<button
+				className='auth-button'
+				type='button'
+				onClick={() => router.back()}>
+				Go Back
+			</button>
+
 			<form className='form-add' onSubmit={handleSubmit}>
 				<div className='grid-add'>
 					<div>
