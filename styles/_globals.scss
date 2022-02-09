@@ -39,6 +39,12 @@ ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	li {
+		list-style: square outside;
+		p {
+			display: block;
+		}
+	}
 }
 
 @include xs {
@@ -58,7 +64,7 @@ ul {
 	h3 {
 		color: $secondary;
 		font-weight: 600;
-		font-size: 1.8rem;
+		font-size: 1.1rem;
 		text-transform: uppercase;
 		letter-spacing: 3px;
 	}
@@ -76,8 +82,10 @@ ul {
 	}
 
 	h5 {
-		color: $primary;
+		color: $secondary;
 		font-size: 1rem;
+		font-weight: 400;
+		letter-spacing: 0.1rem;
 	}
 
 	h6 {
@@ -86,8 +94,18 @@ ul {
 		font-weight: 300;
 		text-transform: uppercase;
 	}
+	h7 {
+		color: $secondary;
+		font-size: 1rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: 0.1rem;
+	}
 
 	p {
+		font-size: 1rem;
+	}
+	a {
 		font-size: 1rem;
 	}
 }
@@ -125,17 +143,33 @@ ul {
 		}
 	}
 
-	h5 {
-		color: $primary;
-	}
-
 	h6 {
 		color: $captions;
 		font-weight: 300;
 		text-transform: uppercase;
 	}
 
-	p {
+	h7 {
+		color: $secondary;
 		font-size: 1rem;
+		text-transform: uppercase;
+		letter-spacing: 0.1rem;
+	}
+
+	p {
+		display: block;
+		font-size: 1rem;
+		img {
+			position: relative;
+
+			width: 200px;
+
+			margin: auto;
+		}
+		a {
+			&:hover {
+				color: $primary;
+			}
+		}
 	}
 }

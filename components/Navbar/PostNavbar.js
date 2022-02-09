@@ -24,15 +24,42 @@ const Navbar = ({ posts }) => {
 			</div>
 			<nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
 				<ul className='title-wrapper' onClick={showSidebar}>
-					{posts.map(pst => (
-						<Link href={`/stories/${pst.slug}`}>
-							<a className='link-style' key={pst.id}>
-								<li className='list-style'>
-									<h7>{pst.title}</h7>
-								</li>
-							</a>
-						</Link>
-					))}
+					<Link href={`/stories/behind-the-scenes`}>
+						<a className='link-style'>
+							<li className='list-style'>
+								<h7>Behind the Scenes</h7>
+							</li>
+						</a>
+					</Link>
+					<Link href={`/stories/the-sleeping-beauty-goes-digital`}>
+						<a className='link-style'>
+							<li className='list-style'>
+								<h7>The Sleeping Beauty Goes Digital</h7>
+							</li>
+						</a>
+					</Link>
+					<Link href={`/stories/the-rwb-takes-the-lead`}>
+						<a className='link-style'>
+							<li className='list-style'>
+								<h7>The RWB Takes the LEAD</h7>
+							</li>
+						</a>
+					</Link>
+					<Link href={`/stories/seizing-the-opportunity-of-a-lifetime`}>
+						<a className='link-style'>
+							<li className='list-style'>
+								<h7>Seizing the Opprotunity of a Lifetime</h7>
+							</li>
+						</a>
+					</Link>
+					<Link href={`/stories/going-home-star-journey-next-chapter`}>
+						<a className='link-style'>
+							<li className='list-style'>
+								<h7>"Going Home Star" Journey - Next Chapter</h7>
+							</li>
+						</a>
+					</Link>
+
 					<div className='button-wrapper'>
 						<Link href='https://www.rwb.org/whats-on/'>
 							<a className='nav-button' target='_blank' rel='noreferrer'>

@@ -2,32 +2,30 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import Preloader from './Preloader';
 import Footer from './Footer';
-import Header from './Header';
+import Navbar from './Navbar/Navbar';
 
-const Layout = ({ title, keywords, description, children }) => {
-	const [loading, setLoading] = useState(false);
+const Layout = ({ title, keywords, description, children, posts }) => {
+	const [loading, setLoading] = useState(true);
 
-	useEffect(() => {
-		setTimeout(() => setLoading(true), 8000);
-	}, []);
+	// useEffect(() => {
+	// 	setTimeout(() => setLoading(true), 8000);
+	// }, []);
 
 	return (
 		<div>
 			<Head>
 				<title>{title}</title>
-				<meta name='description' content='{description}' />
-				<meta name='keyword' content='{keywords}' />
+				<meta name='description' content={description} />
+				<meta name='keyword' content={keywords} />
 			</Head>
+
 			{loading === true ? (
 				<>
-					<Header />
-
 					<div className='body-spacing'>{children}</div>
 					<Footer />
 				</>
 			) : (
 				<>
-					<Header />
 					<Preloader />
 				</>
 			)}

@@ -10,6 +10,7 @@ const Preloader = () => {
 
 		config: {
 			duration: 3000,
+			s,
 		},
 		onRest: () => set(!show),
 	});

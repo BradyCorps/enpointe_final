@@ -1,12 +1,14 @@
+import { API_URL } from '@/config/index';
 import Layout from '@/components/Layout';
+import Navbar from '@/components/Navbar/Navbar';
 import PostItem from '@/components/PostItem';
 import TitleCard from '@/components/TitleCard';
-import { API_URL } from '@/config/index';
 
 const PostPage = ({ posts }) => {
 	return (
 		<div>
-			<Layout>
+			<Navbar posts={posts} />
+			<Layout posts={posts}>
 				<TitleCard />
 				{posts.length === 0 && <h3>No Posts to show</h3>}
 				{posts.map(pst => (
@@ -17,6 +19,8 @@ const PostPage = ({ posts }) => {
 	);
 };
 
+export default PostPage;
+
 export async function getStaticProps() {
 	const res = await fetch(`${API_URL}/posts`);
 	const posts = await res.json();
@@ -26,5 +30,3 @@ export async function getStaticProps() {
 		revalidate: 1,
 	};
 }
-
-export default PostPage;

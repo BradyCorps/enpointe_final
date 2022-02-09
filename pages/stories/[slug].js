@@ -2,43 +2,50 @@ import Link from 'next/link';
 import Layout from '@/components/Layout';
 import { ToastContainer, toast } from 'react-toastify';
 import { API_URL } from '@/config/index';
-import { useRouter } from 'next/router';
-
 import ReactMarkdown from 'react-markdown';
+import PostNavbar from '@/components/Navbar/PostNavbar';
 
-const StoryPage = ({ posts, pst }) => {
-	const router = useRouter();
-
+const StoryPage = ({ pst }) => {
+	// const imagerender = () => {
+	// 	if (
+	// 		pst.secondFeature ||
+	// 		pst.thirdFeature ||
+	// 		pst.fourthFeature ||
+	// 		pst.fifthFeature ||
+	// 		pst.sixthFeature ||
+	// 		pst.seventhFeature == 'null'
+	// 	) {
+	// 		return <></>;
+	// 	} else {
+	// 		return pst.secondFeature.formats.large.url;
+	// 	}
+	// };
 	return (
 		<div>
+			<PostNavbar />
 			<Layout>
 				<div className='container'>
 					<div className='post'>
 						<div className='info-wrapper'>
-							<div className='postItem-description-wrapper'>
-								<div className='title-name-size'>
-									<h1>{pst.title}</h1>
-								</div>
-								<div className='read-more-align'>
-									<p>{pst.description} </p>
-									<div className='link'>
-										<Link href='/stories'>
-											<button className='main-button'>See More Stories</button>
-										</Link>
-									</div>
-								</div>
+							<div className='story-title-wrapper'>
+								<h1>{pst.title}</h1>
+								<Link href={`/stories`}>
+									<button className='auth-button'>See More Stories</button>
+								</Link>
+							</div>
+							<div className='description-wrapper'>
+								<p>{pst.description}</p>
 							</div>
 						</div>
 						<div className='img-container'>
 							<div className='img-solid-overlay'></div>
 							<div className='img-gradient-overlay'></div>
-
 							<img
 								className='img'
 								src={
-									pst.mainImage
+									pst.mainImage.formats.large == 'undefined'
 										? pst.mainImage.formats.large.url
-										: './images/default.png'
+										: pst.mainImage.formats.medium.url
 								}
 								alt='Test'
 							/>
@@ -53,28 +60,56 @@ const StoryPage = ({ posts, pst }) => {
 					<ReactMarkdown>{pst.paragraph2}</ReactMarkdown>
 					<div className='image-feature-wrapper'>
 						<div className='image-single-caption-wrapper'>
-							<img
-								className='article-feature-image'
-								src={
-									pst.secondFeature
-										? pst.secondFeature.formats.large.url
-										: pst.secondFeature.alternativeText
-								}
-								alt='Second Featured Image'
-							/>
-							<p className='caption'>{pst.secondFeature.caption}</p>
+							{pst.secondFeature == null ? (
+								''
+							) : (
+								<>
+									<img
+										className='article-feature-image'
+										src={
+											pst.secondFeature == 'undefined'
+												? ''
+												: pst.secondFeature.formats.large.url ||
+												  pst.secondFeature.formats.small.url
+										}
+										alt={
+											pst.secondFeature == 'undefined'
+												? pst.secondFeature.alternaiveText
+												: ''
+										}
+									/>
+									<p className='caption'>
+										{pst.caption == 'undefined'
+											? ''
+											: pst.secondFeature.caption}
+									</p>
+								</>
+							)}
 						</div>
 						<div className='image-single-caption-wrapper'>
-							<img
-								className='article-feature-image'
-								src={
-									pst.thirdFeature
-										? pst.thirdFeature.formats.large.url
-										: './images/default.png'
-								}
-								alt='Third Featured Image'
-							/>
-							<p className='caption'>{pst.thirdFeature.caption}</p>
+							{pst.thirdFeature == null ? (
+								''
+							) : (
+								<>
+									<img
+										className='article-feature-image'
+										src={
+											pst.thirdFeature == 'undefined'
+												? ''
+												: pst.thirdFeature.formats.large.url ||
+												  pst.thirdFeature.formats.small.url
+										}
+										alt={
+											pst.thirdFeature == 'undefined'
+												? pst.thirdFeature.alternaiveText
+												: ''
+										}
+									/>
+									<p className='caption'>
+										{pst.caption == 'undefined' ? '' : pst.thirdFeature.caption}
+									</p>
+								</>
+							)}
 						</div>
 					</div>
 
@@ -83,56 +118,112 @@ const StoryPage = ({ posts, pst }) => {
 					<ReactMarkdown>{pst.paragraph4}</ReactMarkdown>
 					<div className='image-feature-wrapper'>
 						<div className='image-single-caption-wrapper'>
-							<img
-								className='article-feature-image'
-								src={
-									pst.fourthFeature
-										? pst.fourthFeature.formats.large.url
-										: pst.fourthFeature.alternativeText
-								}
-								alt='Second Featured Image'
-							/>
-							<p className='caption'>{pst.fourthFeature.caption}</p>
+							{pst.fourthFeature == null ? (
+								''
+							) : (
+								<>
+									<img
+										className='article-feature-image'
+										src={
+											pst.fourthFeature == 'undefined'
+												? ''
+												: pst.fourthFeature.formats.large.url ||
+												  pst.fourthFeature.formats.small.url
+										}
+										alt={
+											pst.fourthFeature == 'undefined'
+												? pst.fourthFeature.alternaiveText
+												: ''
+										}
+									/>
+									<p className='caption'>
+										{pst.caption == 'undefined'
+											? ''
+											: pst.fourthFeature.caption}
+									</p>
+								</>
+							)}
 						</div>
 						<div className='image-single-caption-wrapper'>
-							<img
-								className='article-feature-image'
-								src={
-									pst.fifthFeature
-										? pst.fifthFeature.formats.large.url
-										: './images/default.png'
-								}
-								alt=''
-							/>
-							<p className='caption'>{pst.fifthFeature.caption}</p>
+							{pst.fifthFeature == null ? (
+								''
+							) : (
+								<>
+									<img
+										className='article-feature-image'
+										src={
+											pst.fifthFeature == 'undefined'
+												? ''
+												: pst.fifthFeature.formats.large.url ||
+												  pst.fifthFeature.formats.small.url
+										}
+										alt={
+											pst.fifthFeature == 'undefined'
+												? pst.fifthFeature.alternaiveText
+												: ''
+										}
+									/>
+									<p className='caption'>
+										{pst.caption == 'undefined' ? '' : pst.fifthFeature.caption}
+									</p>
+								</>
+							)}
 						</div>
 					</div>
 					<ReactMarkdown>{pst.paragraph5}</ReactMarkdown>
 					<ReactMarkdown>{pst.paragraph6}</ReactMarkdown>
 					<div className='image-feature-wrapper'>
 						<div className='image-single-caption-wrapper'>
-							<img
-								className='article-feature-image'
-								src={
-									pst.sixthFeature
-										? pst.sixthFeature.formats.large.url
-										: pst.sixthFeature.alternativeText
-								}
-								alt='Second Featured Image'
-							/>
-							<p className='caption'>{pst.sixthFeature.caption}</p>
+							{pst.sixthFeature == null ? (
+								''
+							) : (
+								<>
+									<img
+										className='article-feature-image'
+										src={
+											pst.sixthFeature == 'undefined'
+												? ''
+												: pst.sixthFeature.formats.large.url ||
+												  pst.sixthFeature.formats.small.url
+										}
+										alt={
+											pst.sixthFeature == 'undefined'
+												? pst.sixthFeature.alternaiveText
+												: ''
+										}
+									/>
+									<p className='caption'>
+										{pst.caption == 'undefined' ? '' : pst.sixthFeature.caption}
+									</p>
+								</>
+							)}
 						</div>
 						<div className='image-single-caption-wrapper'>
-							<img
-								className='article-feature-image'
-								src={
-									pst.seventhFeature
-										? pst.seventhFeature.formats.large.url
-										: pst.seventhFeature.alternativeText
-								}
-								alt=''
-							/>
-							<p className='caption'>{pst.seventhFeature.caption}</p>
+							{pst.seventhFeature == null ? (
+								''
+							) : (
+								<>
+									<img
+										className='article-feature-image'
+										src={
+											pst.seventhFeature == 'undefined'
+												? ''
+												: pst.seventhFeature.formats.large.url ||
+												  pst.seventhFeature.formats.small.url
+										}
+										alt={
+											pst.seventhFeature == 'undefined'
+												? pst.seventhFeature.alternaiveText
+												: ''
+										}
+									/>
+									<p className='caption'>
+										{pst.caption == 'undefined'
+											? ''
+											: pst.seventhFeature.caption}
+									</p>
+								</>
+							)}
 						</div>
 					</div>
 				</div>
@@ -148,6 +239,7 @@ export async function getStaticPaths() {
 	const paths = posts.map(pst => ({
 		params: { slug: pst.slug },
 	}));
+
 	return {
 		paths,
 		fallback: true,

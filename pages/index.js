@@ -2,12 +2,13 @@ import Layout from '@/components/Layout';
 import PostItem from '@/components/PostItem';
 import TitleCard from '@/components/TitleCard';
 import { API_URL } from '@/config/index';
-import Head from 'next/head';
+import Navbar from '@/components/Navbar/Navbar';
 
 const HomePage = ({ posts }) => {
 	return (
 		<div>
-			<Layout>
+			<Navbar posts={posts} />
+			<Layout posts={posts}>
 				<TitleCard />
 				{posts.length === 0 && <h3>No Posts to show</h3>}
 				{posts.map(pst => (
