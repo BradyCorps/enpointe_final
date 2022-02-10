@@ -232,21 +232,33 @@ const StoryPage = ({ pst }) => {
 	);
 };
 
-export async function getStaticPaths() {
-	const res = await fetch(`${API_URL}/posts`);
-	const posts = await res.json();
+// export async function getStaticPaths() {
+// 	const res = await fetch(`${API_URL}/posts`);
+// 	const posts = await res.json();
 
-	const paths = posts.map(pst => ({
-		params: { slug: pst.slug },
-	}));
+// 	const paths = posts.map(pst => ({
+// 		params: { slug: pst.slug },
+// 	}));
 
-	return {
-		paths,
-		fallback: true,
-	};
-}
+// 	return {
+// 		paths,
+// 		fallback: true,
+// 	};
+// }
 
-export async function getStaticProps({ params: { slug } }) {
+// export async function getStaticProps({ params: { slug } }) {
+// 	const res = await fetch(`${API_URL}/posts?slug=${slug}`);
+
+// 	const stories = await res.json();
+// 	return {
+// 		props: {
+// 			pst: stories[0],
+// 		},
+// 		revalidate: 1,
+// 	};
+// }
+
+export async function getServerSideProps({ query: { slug } }) {
 	const res = await fetch(`${API_URL}/posts?slug=${slug}`);
 
 	const stories = await res.json();
@@ -254,18 +266,6 @@ export async function getStaticProps({ params: { slug } }) {
 		props: {
 			pst: stories[0],
 		},
-		revalidate: 1,
 	};
 }
-
-// export async function getServerSideProps({ query: { slug } }) {
-// 	const res = await fetch(`${API_URL}/api/posts/${slug}`);
-
-// 	const stories = await res.json();
-// 	return {
-// 		props: {
-// 			pst: stories[0],
-// 		},
-// 	};
-// }
 export default StoryPage;

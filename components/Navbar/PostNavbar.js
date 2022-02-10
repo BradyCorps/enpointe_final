@@ -55,7 +55,14 @@ const Navbar = ({ posts }) => {
 					<Link href={`/stories/going-home-star-journey-next-chapter`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h7>"Going Home Star" Journey - Next Chapter</h7>
+								<h7>&ldquo;Going Home Star&rdquo; Journey - Next Chapter</h7>
+							</li>
+						</a>
+					</Link>
+					<Link href={`/`}>
+						<a className='link-style'>
+							<li className='list-style'>
+								<h7>Return Home</h7>
 							</li>
 						</a>
 					</Link>

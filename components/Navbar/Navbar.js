@@ -25,14 +25,21 @@ const Navbar = ({ posts }) => {
 			<nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
 				<ul className='title-wrapper' onClick={showSidebar}>
 					{posts.map(pst => (
-						<Link href={`/stories/${pst.slug}`}>
-							<a className='link-style' key={pst.id}>
+						<Link key={pst.id} href={`/stories/${pst.slug}`}>
+							<a className='link-style'>
 								<li className='list-style'>
 									<h7>{pst.title}</h7>
 								</li>
 							</a>
 						</Link>
 					))}
+					<Link href={`/`}>
+						<a className='link-style'>
+							<li className='list-style'>
+								<h7>Return Home</h7>
+							</li>
+						</a>
+					</Link>
 					<div className='button-wrapper'>
 						<Link href='https://www.rwb.org/whats-on/'>
 							<a className='nav-button' target='_blank' rel='noreferrer'>

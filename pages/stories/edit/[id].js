@@ -8,7 +8,7 @@ import Layout from '@/components/Layout';
 import Modal from '@/components/Modal';
 import ImageUpload from '@/components/ImageUpload';
 
-const editPostPage = ({ pst, token }) => {
+const EditPostPage = ({ pst, token }) => {
 	const [values, setValues] = useState({
 		title: pst.title,
 		description: pst.description,
@@ -145,4 +145,4 @@ export async function getServerSideProps({ params: { id }, req }) {
 	};
 }
 
-export default editPostPage;
+export default EditPostPage;

@@ -10,15 +10,12 @@ const TitleCard = () => {
 									<span className='en'>En</span>Pointe.
 								</h1>
 								<p className='title-card-description'>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Debitis aperiam molestiae nostrum vitae eveniet vero
-									temporibus quidem architecto illo at molestias, voluptates
-									ducimus quisquam? Cumque adipisci nulla, vero similique
-									aliquam suscipit rerum dolorum. Consequuntur a reiciendis,
-									molestias distinctio laborum quidem.
+									Journey into the Royal Winnipeg Ballet and read candid
+									interviews, see exclusive content and stay up to date with all
+									things RWB.
 								</p>
 							</div>
-							<h4>February 2022</h4>
+							<h4>February 2022 Edition</h4>
 						</div>
 					</div>
 				</div>

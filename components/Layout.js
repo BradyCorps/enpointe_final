@@ -5,11 +5,11 @@ import Footer from './Footer';
 import Navbar from './Navbar/Navbar';
 
 const Layout = ({ title, keywords, description, children, posts }) => {
-	const [loading, setLoading] = useState(true);
+	const [loading, setLoading] = useState(false);
 
-	// useEffect(() => {
-	// 	setTimeout(() => setLoading(true), 8000);
-	// }, []);
+	useEffect(() => {
+		setTimeout(() => setLoading(true), 8000);
+	}, []);
 
 	return (
 		<div>
