@@ -22,6 +22,9 @@
 
 			.description-wrapper {
 				color: $offwhite;
+				p {
+					margin-right: 2rem;
+				}
 			}
 		}
 		@include lg {

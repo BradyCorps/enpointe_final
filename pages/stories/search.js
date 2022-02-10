@@ -11,15 +11,19 @@ const SearchPage = ({ posts }) => {
 	return (
 		<Layout>
 			<Navbar posts={posts} />
-			<h2>Search Results for {router.query.term}</h2>
+			<div className='search-wrapper'>
+				<h3 className='search-results'>
+					Search Results for {router.query.term}
+				</h3>
 
-			{posts.length === 0 && <h3>No Posts to show</h3>}
-			{posts.map(pst => (
-				<PostItem key={pst.id} pst={pst} />
-			))}
-			<Link href='/'>
-				<button>Back to Home</button>
-			</Link>
+				{posts.length === 0 && <h3>No Posts to show</h3>}
+				{posts.map(pst => (
+					<PostItem key={pst.id} pst={pst} />
+				))}
+				<Link href='/'>
+					<button className='auth-button'>Back to Home</button>
+				</Link>
+			</div>
 		</Layout>
 	);
 };

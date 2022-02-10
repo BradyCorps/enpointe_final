@@ -43,3 +43,14 @@
 		}
 	}
 }
+
+.search-wrapper {
+	background-color: $primary;
+
+	.search-results {
+		margin-left: 1rem;
+	}
+	button {
+		width: 100vw;
+	}
+}
