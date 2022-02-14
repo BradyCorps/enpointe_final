@@ -11,7 +11,7 @@ const PostItem = ({ pst }) => {
 					<div className='description-wrapper'>
 						<p>{pst.description}</p>
 						<Link href={`/stories/${pst.slug}`}>
-							<a className='date-align'>Read More</a>
+							<a className='read-more'>Read More</a>
 						</Link>
 					</div>
 				</div>

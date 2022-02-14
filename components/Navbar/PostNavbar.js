@@ -20,49 +20,49 @@ const Navbar = ({ posts }) => {
 						<span className='line'></span>
 					</div>
 				</div>
-				<h5 className='menu-title'>Browse Articles</h5>
+				<h3 className='menu-title'>Browse Articles</h3>
 			</div>
 			<nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
 				<ul className='title-wrapper' onClick={showSidebar}>
 					<Link href={`/stories/behind-the-scenes`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h7>Behind the Scenes</h7>
+								<h4>Behind the Scenes</h4>
 							</li>
 						</a>
 					</Link>
 					<Link href={`/stories/the-sleeping-beauty-goes-digital`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h7>The Sleeping Beauty Goes Digital</h7>
+								<h4>The Sleeping Beauty Goes Digital</h4>
 							</li>
 						</a>
 					</Link>
 					<Link href={`/stories/the-rwb-takes-the-lead`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h7>The RWB Takes the LEAD</h7>
+								<h4>The RWB Takes the LEAD</h4>
 							</li>
 						</a>
 					</Link>
 					<Link href={`/stories/seizing-the-opportunity-of-a-lifetime`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h7>Seizing the Opprotunity of a Lifetime</h7>
+								<h4>Seizing the Opprotunity of a Lifetime</h4>
 							</li>
 						</a>
 					</Link>
 					<Link href={`/stories/going-home-star-journey-next-chapter`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h7>&ldquo;Going Home Star&rdquo; Journey - Next Chapter</h7>
+								<h4>&ldquo;Going Home Star&rdquo; Journey - Next Chapter</h4>
 							</li>
 						</a>
 					</Link>
 					<Link href={`/`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h7>Return Home</h7>
+								<h4>Return Home</h4>
 							</li>
 						</a>
 					</Link>

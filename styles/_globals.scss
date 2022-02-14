@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;700;900&display=swap');
 
 html,
 body {
@@ -11,7 +11,8 @@ body {
 
 blockquote {
 	margin: 0;
-	font-weight: 100;
+	padding: 0rem 5rem;
+
 	p {
 		font-size: 1.25rem;
 		font-style: italic;
@@ -59,18 +60,18 @@ ul {
 
 	h3 {
 		color: $secondary;
-		font-weight: 600;
-		font-size: 1.1rem;
-		text-transform: uppercase;
-		letter-spacing: 3px;
+		font-weight: 400;
+		font-size: 1.15rem;
+		letter-spacing: 0.1rem;
 	}
 
 	h4 {
-		color: $offwhite;
-		font-size: 1.2rem;
+		color: $secondary;
+		font-size: 1.06rem;
 		text-transform: uppercase;
-		letter-spacing: 3px;
+		letter-spacing: 0.2rem;
 		margin: 0;
+		font-weight: 500;
 
 		&.date-align {
 			margin-left: 5px;
@@ -78,7 +79,7 @@ ul {
 	}
 
 	h5 {
-		color: $secondary;
+		color: $offwhite;
 		font-size: 1rem;
 		font-weight: 400;
 		letter-spacing: 0.1rem;
@@ -100,9 +101,13 @@ ul {
 
 	p {
 		font-size: 1rem;
+		font-weight: 300;
 	}
 	a {
 		font-size: 1rem;
+	}
+	blockquote {
+		padding: 0rem 2rem;
 	}
 }
 
@@ -111,7 +116,7 @@ ul {
 		margin: 0;
 		color: $offwhite;
 		font-weight: 300;
-		font-size: 5rem;
+		font-size: 4rem;
 	}
 
 	h2 {
@@ -122,17 +127,21 @@ ul {
 
 	h3 {
 		color: $secondary;
-		font-weight: 600;
-		font-size: 1.5rem;
-		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 1.565rem;
+		letter-spacing: 0.1rem;
 	}
 
 	h4 {
 		color: $offwhite;
-		font-size: 1rem;
+		font-size: 0.95rem;
 		text-transform: uppercase;
-		letter-spacing: 3px;
+		letter-spacing: 0.2rem;
 		margin: 0;
+		transition: 0.3s ease-in-out;
+		&:hover {
+			color: $secondary;
+		}
 
 		&.date-align {
 			margin-left: 5px;
@@ -155,7 +164,7 @@ ul {
 	p {
 		display: block;
 		font-size: 1.2rem;
-		font-weight: 200;
+		font-weight: 300;
 		img {
 			position: relative;
 
@@ -165,7 +174,8 @@ ul {
 		}
 		a {
 			&:hover {
-				color: $primary;
+				color: $secondary;
+				opacity: 50%;
 			}
 		}
 	}

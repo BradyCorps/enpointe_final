@@ -10,15 +10,13 @@ const Footer = () => {
 						<h1>Stay Connected</h1>
 					</div>
 					<div className='call-to-action'>
-						<h2>Share your Thoughts</h2>
+						<h3>Share your Thoughts</h3>
 						<p>
 							We would love to hear from you about our stories and any topic
-							ideas for upcoming editions.
+							ideas for upcoming editions. En Pointe is published bimonthly by
+							the RWB marketing department.
 						</p>
 
-						<p>
-							En Pointe is published bimonthly by the RWB marketing department.
-						</p>
 						<div className='email'>
 							<a
 								target='_blank'
@@ -31,7 +29,7 @@ const Footer = () => {
 
 					<div className='second-section'>
 						<div className='logo-container'>
-							<h3>Follow Us</h3>
+							<h2>Follow Us</h2>
 							<a
 								href='https://www.instagram.com/rwballet/?hl=en'
 								rel='noreferrer'
@@ -67,7 +65,7 @@ const Footer = () => {
 							</a>
 						</div>
 						<div className='box-office'>
-							<h3>Box Office</h3>
+							<h2>Box Office</h2>
 							<p>204-956-2792</p>
 
 							<a

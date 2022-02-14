@@ -29,9 +29,6 @@ const StoryPage = ({ pst }) => {
 						<div className='info-wrapper'>
 							<div className='story-title-wrapper'>
 								<h1>{pst.title}</h1>
-								<Link href={`/stories`}>
-									<button className='auth-button'>See More Stories</button>
-								</Link>
 							</div>
 							<div className='description-wrapper'>
 								<p>{pst.description}</p>
@@ -226,6 +223,9 @@ const StoryPage = ({ pst }) => {
 							)}
 						</div>
 					</div>
+					<Link href={`/stories`}>
+						<button className='main-button'>See More Stories</button>
+					</Link>
 				</div>
 			</Layout>
 		</div>

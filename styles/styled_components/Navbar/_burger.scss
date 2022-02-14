@@ -67,10 +67,12 @@
 		@media (min-width: 1024px) {
 			.line:first-of-type {
 				width: 26px;
+				background-color: $offwhite;
 			}
 
 			.line:last-of-type {
 				width: 12px;
+				background-color: $offwhite;
 			}
 		}
 	}
