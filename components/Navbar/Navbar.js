@@ -28,7 +28,7 @@ const Navbar = ({ posts }) => {
 						<Link key={pst.id} href={`/stories/${pst.slug}`}>
 							<a className='link-style'>
 								<li className='list-style'>
-									<h7>{pst.title}</h7>
+									<h4>{pst.title}</h4>
 								</li>
 							</a>
 						</Link>
