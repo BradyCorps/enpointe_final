@@ -20,7 +20,7 @@ const Navbar = ({ posts }) => {
 						<span className='line'></span>
 					</div>
 				</div>
-				<h5 className='menu-title'>Browse Articles</h5>
+				<h3 className='menu-title'>Browse Articles</h3>
 			</div>
 			<nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
 				<ul className='title-wrapper' onClick={showSidebar}>
