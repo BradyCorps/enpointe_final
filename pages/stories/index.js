@@ -21,12 +21,11 @@ const PostPage = ({ posts }) => {
 
 export default PostPage;
 
-export async function getStaticProps() {
-	const res = await fetch(`${API_URL}/posts`);
+export async function getServerSideProps() {
+	const res = await fetch(`${API_URL}/posts?_sort=id:ASC`);
 	const posts = await res.json();
 
 	return {
 		props: { posts },
-		revalidate: 1,
 	};
 }
