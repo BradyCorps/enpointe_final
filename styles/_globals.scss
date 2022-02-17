@@ -79,10 +79,11 @@ ul {
 	}
 
 	h5 {
-		color: $offwhite;
+		color: $primary;
 		font-size: 1rem;
 		font-weight: 400;
 		letter-spacing: 0.1rem;
+		text-decoration: underline;
 	}
 
 	h6 {
@@ -167,9 +168,7 @@ ul {
 		font-weight: lighter;
 		img {
 			position: relative;
-
 			width: 200px;
-
 			margin: auto;
 		}
 		a {
@@ -177,6 +176,14 @@ ul {
 				color: $secondary;
 				opacity: 50%;
 			}
+		}
+	}
+}
+
+.workaround {
+	p {
+		img {
+			width: 100%;
 		}
 	}
 }

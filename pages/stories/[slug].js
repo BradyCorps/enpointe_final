@@ -168,7 +168,9 @@ const StoryPage = ({ pst }) => {
 						</div>
 					</div>
 					<ReactMarkdown>{pst.paragraph5}</ReactMarkdown>
-					<ReactMarkdown>{pst.paragraph6}</ReactMarkdown>
+
+					<ReactMarkdown className='workaround'>{pst.paragraph6}</ReactMarkdown>
+
 					<div className='image-feature-wrapper'>
 						<div className='image-single-caption-wrapper'>
 							{pst.sixthFeature == null ? (

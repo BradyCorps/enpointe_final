@@ -45,7 +45,7 @@ const Navbar = ({ posts }) => {
 							</li>
 						</a>
 					</Link>
-					<Link href={`/stories/seizing-the-opportunity-of-a-lifetime`}>
+					<Link href={`/stories/seizing-opportunity-of-a-lifetime`}>
 						<a className='link-style'>
 							<li className='list-style'>
 								<h4>Seizing the Opprotunity of a Lifetime</h4>
