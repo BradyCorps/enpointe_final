@@ -88,7 +88,7 @@ const Navbar = ({ posts }) => {
 					<div className='button-wrapper'>
 						<Link href='https://www.rwb.org/whats-on/'>
 							<a className='nav-button' target='_blank' rel='noreferrer'>
-								Whats On
+								Coming Attractions
 							</a>
 						</Link>
 						<Link href='https://www.rwb.org/support/'>
