@@ -8,6 +8,7 @@ const Footer = () => {
 				<div className='content-wrapper'>
 					<div className='footer-header'>
 						<h1>Stay Connected</h1>
+						<img src='./images/logo.png'></img>
 					</div>
 					<div className='call-to-action'>
 						<h3>Share your Thoughts</h3>

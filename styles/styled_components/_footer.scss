@@ -10,7 +10,14 @@
 		color: $secondary;
 
 		.footer-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 			margin-top: 2rem;
+			img {
+				height: auto;
+				width: 2rem;
+			}
 		}
 
 		.call-to-action {
@@ -118,6 +125,11 @@
 	}
 	.footer {
 		.content-wrapper {
+			.footer-header {
+				img {
+					width: 7rem;
+				}
+			}
 			.second-section {
 				p {
 					font-size: 0.8rem;
