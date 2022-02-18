@@ -8,7 +8,7 @@ const Footer = () => {
 				<div className='content-wrapper'>
 					<div className='footer-header'>
 						<h1>Stay Connected</h1>
-						<img src='./images/logo.png'></img>
+						<img src='https://res.cloudinary.com/royal-winnipeg-ballet/image/upload/v1645204174/RWB-LOGO-BLANK-R_ovrk6l.png'></img>
 					</div>
 					<div className='call-to-action'>
 						<h3>Share your Thoughts</h3>
