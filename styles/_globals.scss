@@ -66,12 +66,15 @@ ul {
 	}
 
 	h4 {
-		color: $secondary;
-		font-size: 1.06rem;
+		color: $offwhite;
+		font-size: 0.95rem;
 		text-transform: uppercase;
 		letter-spacing: 0.2rem;
 		margin: 0;
-		font-weight: 500;
+		transition: 0.3s ease-in-out;
+		&:hover {
+			color: $secondary;
+		}
 
 		&.date-align {
 			margin-left: 5px;
@@ -109,6 +112,22 @@ ul {
 	}
 	blockquote {
 		padding: 0rem 2rem;
+	}
+	p {
+		display: block;
+		font-size: 1.2rem;
+		font-weight: lighter;
+		img {
+			position: relative;
+			width: 200px;
+			margin: auto;
+		}
+		a {
+			&:hover {
+				color: $secondary;
+				opacity: 50%;
+			}
+		}
 	}
 }
 
