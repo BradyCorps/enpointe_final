@@ -1,9 +1,11 @@
-@import url('https://use.typekit.net/esa2dmw.css');
+@import url('https://use.typekit.net/fgr4mgy.css');
 html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: Lato, sans-serif;
+	font-family: sculpin, sans-serif;
+	font-weight: 300;
+	font-style: normal;
 	background-color: $offwhite;
 	overflow-x: hidden;
 	-webkit-font-smoothing: subpixel-antialiased;
@@ -48,7 +50,7 @@ ul {
 	h1 {
 		margin: 0;
 		color: $offwhite;
-		font-weight: lighter;
+		font-weight: normal;
 		font-size: 2.5rem;
 	}
 
@@ -92,15 +94,8 @@ ul {
 	h6 {
 		font-size: 0.8rem;
 		color: $captions;
-		font-weight: lighter;
+		font-weight: normal;
 		text-transform: uppercase;
-	}
-	h7 {
-		color: $secondary;
-		font-size: 1rem;
-		font-weight: lighter;
-		text-transform: uppercase;
-		letter-spacing: 0.1rem;
 	}
 
 	p {
@@ -135,7 +130,7 @@ ul {
 	h1 {
 		margin: 0;
 		color: $offwhite;
-		font-weight: lighter;
+		font-weight: normal;
 		font-size: 4rem;
 	}
 
@@ -170,15 +165,8 @@ ul {
 
 	h6 {
 		color: $captions;
-		font-weight: lighter;
+		font-weight: normal;
 		text-transform: uppercase;
-	}
-
-	h7 {
-		color: $secondary;
-		font-size: 1rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1rem;
 	}
 
 	p {
