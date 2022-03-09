@@ -16,7 +16,7 @@ const TitleCard = () => {
 									backstage news.
 								</p>
 							</div>
-							<h4>February 2022 Edition</h4>
+							<h4>March 2022 Edition</h4>
 						</div>
 					</div>
 				</div>
