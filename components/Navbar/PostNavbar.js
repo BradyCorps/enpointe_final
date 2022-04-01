@@ -64,17 +64,6 @@ const Navbar = ({ posts }) => {
 							</li>
 						</a>
 					</Link>
-					<Link
-						href={`/stories/black-history-matters-look-listen-share-and-act`}>
-						<a className='link-style'>
-							<li className='list-style'>
-								<h4>
-									&ldquo;Black History Matters: Look, Listen, Share and
-									Act&rdquo;
-								</h4>
-							</li>
-						</a>
-					</Link>
 					<Link href={`/stories/bid-it-to-win-it-at-ballet-ball-auction`}>
 						<a className='link-style'>
 							<li className='list-style'>
