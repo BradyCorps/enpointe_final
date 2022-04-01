@@ -31,24 +31,29 @@ const Navbar = ({ posts }) => {
 							</li>
 						</a>
 					</Link>
-					<Link href={`/stories/the-sleeping-beauty-goes-digital`}>
+					<Link
+						href={`/stories/ballet-meets-broadway-in-val-caniparolis-a-cinderella-story`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>The Sleeping Beauty Goes Digital</h4>
+								<h4>
+									&ldquo;Ballet Meets Broadway"&rdquo; in Val Caniparoli's A
+									Cinderella Story
+								</h4>
 							</li>
 						</a>
 					</Link>
-					<Link href={`/stories/the-rwb-takes-the-lead`}>
+					<Link href={`/stories/spring-events-showcase-exceptional-talent`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>The RWB Takes the LEAD</h4>
+								<h4>Spring Events Showcase Exceptional Talent</h4>
 							</li>
 						</a>
 					</Link>
-					<Link href={`/stories/seizing-opportunity-of-a-lifetime`}>
+					<Link
+						href={`/stories/spotlight-on-laurencia-and-canadian-dance-luminary`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>Seizing the Opportunity of a Lifetime</h4>
+								<h4>Spotlight on Laurencia – and Canadian Dance Luminary</h4>
 							</li>
 						</a>
 					</Link>
@@ -70,10 +75,10 @@ const Navbar = ({ posts }) => {
 							</li>
 						</a>
 					</Link>
-					<Link href={`/stories/audition-from-anywhere-in-the-country`}>
+					<Link href={`/stories/bid-it-to-win-it-at-ballet-ball-auction`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>Audition from anywhere in the country</h4>
+								<h4>Bid it to Win it at Ballet Ball Auction</h4>
 							</li>
 						</a>
 					</Link>
