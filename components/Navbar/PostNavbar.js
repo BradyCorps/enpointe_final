@@ -36,7 +36,7 @@ const Navbar = ({ posts }) => {
 						<a className='link-style'>
 							<li className='list-style'>
 								<h4>
-									&ldquo;Ballet Meets Broadway"&rdquo; in Val Caniparoli's A
+									&ldquo;Ballet Meets Broadway&rdquo; in Val Caniparoli's A
 									Cinderella Story
 								</h4>
 							</li>
