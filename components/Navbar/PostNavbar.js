@@ -71,7 +71,7 @@ const Navbar = () => {
 					<Link href={`/stories/finer-things-in-life`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>Finer "Things" in Life...</h4>
+								<h4>Finer &ldquo;Things&rdquo; in Life...</h4>
 							</li>
 						</a>
 					</Link>
