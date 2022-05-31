@@ -34,10 +34,11 @@ const Layout = ({ title, keywords, description, children, posts }) => {
 };
 
 Layout.defaultProps = {
-	title: 'EnPointe | Current RWB News and Articles',
+	title: 'RWB EnPointe | Current RWB News and Articles',
 	description:
-		'Enjoy a reading experience that opens the curtains on all things Royal Winnipeg Ballet',
-	keywords: 'Blog, Dance, Ballet, Events, Shows, Royal Winnipeg Ballet',
+		'Enpointe is a reading experience that opens the curtains on all things Royal Winnipeg Ballet',
+	keywords:
+		'Blog, Dance, Ballet, Events, Shows, Royal Winnipeg Ballet, RWB, Enpointe',
 };
 
 export default Layout;

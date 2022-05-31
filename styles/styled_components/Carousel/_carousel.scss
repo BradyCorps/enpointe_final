@@ -1,0 +1,33 @@
+.carousel-header-img {
+	width: 100%;
+	height: auto;
+}
+
+.carousel-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
+	overflow: hidden;
+	height: 20rem;
+}
+.carousel-thumbnail-style {
+	width: 7rem;
+	height: 5rem;
+	object-fit: cover;
+	margin-right: 1rem;
+}
+.carousel-header-style {
+	width: 100vw;
+	height: auto;
+	object-fit: cover;
+}
+
+@include md {
+	.carousel-wrapper {
+		flex-direction: row;
+		align-items: initial;
+		justify-content: flex-start;
+	}
+}

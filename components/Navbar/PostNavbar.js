@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-const Navbar = ({ posts }) => {
+const Navbar = () => {
 	const [sidebar, setSidebar] = useState(false);
 
 	const showSidebar = () => setSidebar(!sidebar);
@@ -20,7 +20,16 @@ const Navbar = ({ posts }) => {
 						<span className='line'></span>
 					</div>
 				</div>
-				<h3 className='menu-title'>Browse Articles</h3>
+				<div className='nav-title-wrapper'>
+					<h3 className='menu-title'>Browse Articles</h3>
+					<Link href={`/`}>
+						<a className='link-style'>
+							<li className='list-style'>
+								<h4>Return Home</h4>
+							</li>
+						</a>
+					</Link>
+				</div>
 			</div>
 			<nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
 				<ul className='title-wrapper' onClick={showSidebar}>
@@ -31,50 +40,46 @@ const Navbar = ({ posts }) => {
 							</li>
 						</a>
 					</Link>
+					<Link href={`/stories/living-the-dream`}>
+						<a className='link-style'>
+							<li className='list-style'>
+								<h4>Living the Dream</h4>
+							</li>
+						</a>
+					</Link>
+					<Link href={`/stories/illuminate-your-world`}>
+						<a className='link-style'>
+							<li className='list-style'>
+								<h4>Illuminate Your World</h4>
+							</li>
+						</a>
+					</Link>
+					<Link href={`/stories/how-refreshing-how-on-the-edge`}>
+						<a className='link-style'>
+							<li className='list-style'>
+								<h4>How Refreshing! How On The Edge!</h4>
+							</li>
+						</a>
+					</Link>
+					<Link href={`/stories/discover-the-adult-summer-dance-difference`}>
+						<a className='link-style'>
+							<li className='list-style'>
+								<h4>Discover the Adult Summer Dance Difference!</h4>
+							</li>
+						</a>
+					</Link>
+					<Link href={`/stories/finer-things-in-life`}>
+						<a className='link-style'>
+							<li className='list-style'>
+								<h4>Finer "Things" in Life...</h4>
+							</li>
+						</a>
+					</Link>
 					<Link
-						href={`/stories/ballet-meets-broadway-in-val-caniparolis-a-cinderella-story`}>
+						href={`/stories/the-power-of-opportunity-to-change-young-lives`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>
-									&ldquo;Ballet Meets Broadway&rdquo; in Val Caniparoli&apos;s A
-									Cinderella Story
-								</h4>
-							</li>
-						</a>
-					</Link>
-					<Link href={`/stories/spring-events-showcase-exceptional-talent`}>
-						<a className='link-style'>
-							<li className='list-style'>
-								<h4>Spring Events Showcase Exceptional Talent</h4>
-							</li>
-						</a>
-					</Link>
-					<Link
-						href={`/stories/spotlight-on-laurencia-and-canadian-dance-luminary`}>
-						<a className='link-style'>
-							<li className='list-style'>
-								<h4>Spotlight on Laurencia – and Canadian Dance Luminary</h4>
-							</li>
-						</a>
-					</Link>
-					<Link href={`/stories/going-home-star-journey-next-chapter`}>
-						<a className='link-style'>
-							<li className='list-style'>
-								<h4>&ldquo;Going Home Star&rdquo; Journey - Next Chapter</h4>
-							</li>
-						</a>
-					</Link>
-					<Link href={`/stories/bid-it-to-win-it-at-ballet-ball-auction`}>
-						<a className='link-style'>
-							<li className='list-style'>
-								<h4>Bid it to Win it at Ballet Ball Auction</h4>
-							</li>
-						</a>
-					</Link>
-					<Link href={`/`}>
-						<a className='link-style'>
-							<li className='list-style'>
-								<h4>Return Home</h4>
+								<h4>The Power of Opportunity to Change Young Lives</h4>
 							</li>
 						</a>
 					</Link>

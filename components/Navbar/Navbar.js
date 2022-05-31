@@ -20,7 +20,16 @@ const Navbar = ({ posts }) => {
 						<span className='line'></span>
 					</div>
 				</div>
-				<h3 className='menu-title'>Browse Articles</h3>
+				<div className='nav-title-wrapper'>
+					<h3 className='menu-title'>Browse Articles</h3>
+					<Link href={`/`}>
+						<a className='link-style'>
+							<li className='list-style'>
+								<h4>Return Home</h4>
+							</li>
+						</a>
+					</Link>
+				</div>
 			</div>
 			<nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
 				<ul className='title-wrapper' onClick={showSidebar}>
@@ -33,13 +42,7 @@ const Navbar = ({ posts }) => {
 							</a>
 						</Link>
 					))}
-					<Link href={`/`}>
-						<a className='link-style'>
-							<li className='list-style'>
-								<h7>Return Home</h7>
-							</li>
-						</a>
-					</Link>
+
 					<div className='button-wrapper'>
 						<Link href='https://www.rwb.org/whats-on/'>
 							<a className='nav-button' target='_blank' rel='noreferrer'>
