@@ -1,17 +1,34 @@
 import { AuthProvider } from '@/context/AuthContext';
 import SimpleReactLightbox from 'simple-react-lightbox';
 import '@/styles/index.scss';
-import Navbar from '@/components/Navbar/Navbar';
+import Script from 'next/script';
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<SimpleReactLightbox>
-			<AuthProvider>
-				{/* Wrap component in AppContext */}
+		<>
+			<Script
+				strategy='lazyOnload'
+				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+			/>
 
-				<Component {...pageProps} />
-			</AuthProvider>
-		</SimpleReactLightbox>
+			<Script strategy='lazyOnload'>
+				{`
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+				page_path: window.location.pathname,
+				});
+		`}
+			</Script>
+			<SimpleReactLightbox>
+				<AuthProvider>
+					{/* Wrap component in AppContext */}
+
+					<Component {...pageProps} />
+				</AuthProvider>
+			</SimpleReactLightbox>
+		</>
 	);
 }
 
