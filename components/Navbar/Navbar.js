@@ -22,6 +22,8 @@ const Navbar = ({ posts }) => {
 				</div>
 				<div className='nav-title-wrapper'>
 					<h3 className='menu-title'>Browse Articles</h3>
+				</div>
+				<div className='return-home'>
 					<Link href={`/`}>
 						<a className='link-style'>
 							<li className='list-style'>

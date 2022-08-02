@@ -22,6 +22,8 @@ const Navbar = () => {
 				</div>
 				<div className='nav-title-wrapper'>
 					<h3 className='menu-title'>Browse Articles</h3>
+				</div>
+				<div className='return-home'>
 					<Link href={`/`}>
 						<a className='link-style'>
 							<li className='list-style'>
@@ -40,46 +42,38 @@ const Navbar = () => {
 							</li>
 						</a>
 					</Link>
-					<Link href={`/stories/living-the-dream`}>
+					<Link href={`/stories/more-behind-the-scenes`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>Living the Dream</h4>
+								<h4>More Behind the Scenes</h4>
 							</li>
 						</a>
 					</Link>
-					<Link href={`/stories/illuminate-your-world`}>
+					<Link href={`/stories/philanthropy-meets-aspirations`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>Illuminate Your World</h4>
+								<h4>Philanthropy Meets Aspirations…</h4>
 							</li>
 						</a>
 					</Link>
-					<Link href={`/stories/how-refreshing-how-on-the-edge`}>
+					<Link href={`/stories/creative-movement-comes-to-life-for-kids`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>How Refreshing! How On The Edge!</h4>
+								<h4>Creative Movement Comes to Life for Kids</h4>
 							</li>
 						</a>
 					</Link>
-					<Link href={`/stories/discover-the-adult-summer-dance-difference`}>
+					<Link href={`/stories/living-the-unexpected-dream`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>Discover the Adult Summer Dance Difference!</h4>
+								<h4>Living the Unexpected Dream…</h4>
 							</li>
 						</a>
 					</Link>
-					<Link href={`/stories/finer-things-in-life`}>
+					<Link href={`/stories/ballet-in-the-park-retrospective`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>Finer &ldquo;Things&rdquo; in Life...</h4>
-							</li>
-						</a>
-					</Link>
-					<Link
-						href={`/stories/the-power-of-opportunity-to-change-young-lives`}>
-						<a className='link-style'>
-							<li className='list-style'>
-								<h4>The Power of Opportunity to Change Young Lives</h4>
+								<h4>Ballet in the Park Retrospective</h4>
 							</li>
 						</a>
 					</Link>
