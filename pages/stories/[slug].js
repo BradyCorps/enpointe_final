@@ -5,24 +5,8 @@ import { API_URL } from '@/config/index';
 import ReactMarkdown from 'react-markdown';
 import PostNavbar from '@/components/Navbar/PostNavbar';
 import { SRLWrapper } from 'simple-react-lightbox';
-import Navbar from '@/components/Navbar/Navbar';
 
 const StoryPage = ({ posts, pst }) => {
-	// const imagerender = () => {
-	// 	if (
-	// 		pst.secondFeature ||
-	// 		pst.thirdFeature ||
-	// 		pst.fourthFeature ||
-	// 		pst.fifthFeature ||
-	// 		pst.sixthFeature ||
-	// 		pst.seventhFeature == 'null'
-	// 	) {
-	// 		return <></>;
-	// 	} else {
-	// 		return pst.secondFeature.formats.large.url;
-	// 	}
-	// };
-
 	const options = {
 		buttons: {
 			iconColor: '#f5f5f5',
@@ -86,24 +70,28 @@ const StoryPage = ({ posts, pst }) => {
 			<ToastContainer />
 
 			<div className='article-container'>
-				{/* <img
-					className='carousel-header-img'
-					src={pst.Carousel[0].url}
-					alt={pst.Carousel[0].alternaiveText}></img>
-				<SRLWrapper options={options}>
-					<div className='carousel-wrapper'>
-						{pst.Carousel.map(caro => (
-							<a href={caro.url}>
-								<img
-									className='carousel-thumbnail-style'
-									src={caro.url}
-									alt={caro.alternativeText}
-									key={caro.id}
-								/>
-							</a>
-						))}
+				{/* <div className='carousel'>
+					<div className='carousel-header-wrapper'>
+						<img
+							className='carousel-header-img'
+							src={pst.Carousel[0].url}
+							alt={pst.Carousel[0].alternaiveText}></img>
 					</div>
-				</SRLWrapper> */}
+					<SRLWrapper options={options}>
+						<div className='carousel-wrapper'>
+							{pst.Carousel.map(caro => (
+								<a href={caro.url}>
+									<img
+										className='carousel-thumbnail-style'
+										src={caro.url}
+										alt={caro.alternativeText}
+										key={caro.id}
+									/>
+								</a>
+							))}
+						</div>
+					</SRLWrapper>
+				</div> */}
 
 				<ReactMarkdown>{pst.body}</ReactMarkdown>
 
@@ -214,54 +202,7 @@ const StoryPage = ({ posts, pst }) => {
 
 				<ReactMarkdown className='workaround'>{pst.paragraph6}</ReactMarkdown>
 
-				<div className='image-feature-wrapper'>
-					<div className='image-single-caption-wrapper'>
-						{pst.sixthFeature == null ? (
-							''
-						) : (
-							<>
-								<img
-									className='article-feature-image'
-									src={
-										pst.sixthFeature == 'undefined' ? '' : pst.sixthFeature.url
-									}
-									alt={
-										pst.sixthFeature == 'undefined'
-											? pst.sixthFeature.alternaiveText
-											: ''
-									}
-								/>
-								<p className='caption'>
-									{pst.caption == 'undefined' ? '' : pst.sixthFeature.caption}
-								</p>
-							</>
-						)}
-					</div>
-					<div className='image-single-caption-wrapper'>
-						{pst.seventhFeature == null ? (
-							''
-						) : (
-							<>
-								<img
-									className='article-feature-image'
-									src={
-										pst.seventhFeature == 'undefined'
-											? ''
-											: pst.seventhFeature.url
-									}
-									alt={
-										pst.seventhFeature == 'undefined'
-											? pst.seventhFeature.alternaiveText
-											: ''
-									}
-								/>
-								<p className='caption'>
-									{pst.caption == 'undefined' ? '' : pst.seventhFeature.caption}
-								</p>
-							</>
-						)}
-					</div>
-				</div>
+				<div className='image-feature-wrapper'></div>
 				<Link href={`/stories`}>
 					<button className='main-button'>See More Stories</button>
 				</Link>

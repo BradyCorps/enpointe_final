@@ -42,38 +42,47 @@ const Navbar = () => {
 							</li>
 						</a>
 					</Link>
-					<Link href={`/stories/more-behind-the-scenes`}>
+					<Link
+						href={`/stories/rwb-brings-back-one-of-canadas-most-celebrated-literary-achievements-to-stage`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>More Behind the Scenes</h4>
+								<h4>
+									RWB Brings Back One of Canada’s Most Celebrated Literary
+									Achievements to Stage!
+								</h4>
 							</li>
 						</a>
 					</Link>
-					<Link href={`/stories/philanthropy-meets-aspirations`}>
+					<Link
+						href={`/stories/centre-stage-with-professional-division-student-jane-du-and-her-mom-echo-wei`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>Philanthropy Meets Aspirations…</h4>
+								<h4>
+									Centre Stage with Professional Division student Jane Du and
+									her mom Echo Wei
+								</h4>
 							</li>
 						</a>
 					</Link>
-					<Link href={`/stories/creative-movement-comes-to-life-for-kids`}>
+					<Link
+						href={`/stories/whats-the-buzz-about-the-new-season-for-the-recreational-division`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>Creative Movement Comes to Life for Kids</h4>
+								<h4>
+									What’s the Buzz about the New Season for the Recreational
+									Division…
+								</h4>
 							</li>
 						</a>
 					</Link>
-					<Link href={`/stories/living-the-unexpected-dream`}>
+					<Link
+						href={`/stories/why-more-canadians-are-leaving-a-gift-to-charity-in-their-wills`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>Living the Unexpected Dream…</h4>
-							</li>
-						</a>
-					</Link>
-					<Link href={`/stories/ballet-in-the-park-retrospective`}>
-						<a className='link-style'>
-							<li className='list-style'>
-								<h4>Ballet in the Park Retrospective</h4>
+								<h4>
+									Why more Canadians are leaving a gift to charity in their
+									Wills
+								</h4>
 							</li>
 						</a>
 					</Link>

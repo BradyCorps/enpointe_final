@@ -8,7 +8,7 @@ const Layout = ({ title, keywords, description, children, posts }) => {
 	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
-		setTimeout(() => setLoading(true), 8000);
+		setTimeout(() => setLoading(true), 5000);
 	}, []);
 
 	return (
