@@ -7,37 +7,37 @@ import PostNavbar from '@/components/Navbar/PostNavbar';
 import { SRLWrapper } from 'simple-react-lightbox';
 
 const StoryPage = ({ posts, pst }) => {
-	const options = {
-		buttons: {
-			iconColor: '#f5f5f5',
-			iconPadding: '10px',
-		},
-		caption: {
-			captionColor: '#ffffff',
-			captionFontSize: '20px',
-			captionFontStyle: 'italic',
-		},
-		settings: {
-			overlayColor: '#202529',
-		},
-		thumbnails: {
-			thumbnailsAlignment: 'center',
-			showThumbnails: true,
-			thumbnailsContainerBackgroundColor: 'transparent',
-			thumbnailsContainerPadding: '0',
-			thumbnailsGap: '0 1px',
-			thumbnailsIconColor: '#ffffff',
-			thumbnailsOpacity: 0.4,
-			thumbnailsPosition: 'bottom',
-			thumbnailsSize: ['100px', '80px'],
-		},
-		progressBar: {
-			backgroundColor: '#f2f2f2',
-			fillColor: '#000000',
-			height: '3px',
-			showProgressBar: true,
-		},
-	};
+	// const options = {
+	// 	buttons: {
+	// 		iconColor: '#f5f5f5',
+	// 		iconPadding: '10px',
+	// 	},
+	// 	caption: {
+	// 		captionColor: '#ffffff',
+	// 		captionFontSize: '20px',
+	// 		captionFontStyle: 'italic',
+	// 	},
+	// 	settings: {
+	// 		overlayColor: '#202529',
+	// 	},
+	// 	thumbnails: {
+	// 		thumbnailsAlignment: 'center',
+	// 		showThumbnails: true,
+	// 		thumbnailsContainerBackgroundColor: 'transparent',
+	// 		thumbnailsContainerPadding: '0',
+	// 		thumbnailsGap: '0 1px',
+	// 		thumbnailsIconColor: '#ffffff',
+	// 		thumbnailsOpacity: 0.4,
+	// 		thumbnailsPosition: 'bottom',
+	// 		thumbnailsSize: ['100px', '80px'],
+	// 	},
+	// 	progressBar: {
+	// 		backgroundColor: '#f2f2f2',
+	// 		fillColor: '#000000',
+	// 		height: '3px',
+	// 		showProgressBar: true,
+	// 	},
+	// };
 	return (
 		<Layout>
 			<PostNavbar />
