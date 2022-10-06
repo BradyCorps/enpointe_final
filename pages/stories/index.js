@@ -7,7 +7,7 @@ import TitleCard from '@/components/TitleCard';
 const PostPage = ({ posts }) => {
 	return (
 		<div>
-			<Navbar posts={posts} />
+			{/* <Navbar posts={posts} /> */}
 			<Layout posts={posts}>
 				<TitleCard />
 				{posts.length === 0 && <h3>No Posts to show</h3>}
