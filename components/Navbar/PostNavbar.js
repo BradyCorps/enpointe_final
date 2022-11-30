@@ -35,54 +35,45 @@ const Navbar = () => {
 			</div>
 			<nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
 				<ul className='title-wrapper' onClick={showSidebar}>
-					<Link href={`/stories/behind-the-scenes`}>
+					<Link href={`/stories/nutcracker-takes-centre-stage`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>Behind the Scenes</h4>
+								<h4>Nutcracker Takes Centre Stage</h4>
 							</li>
 						</a>
 					</Link>
 					<Link
-						href={`/stories/rwb-brings-back-one-of-canadas-most-celebrated-literary-achievements-to-stage`}>
+						href={`/stories/recreational-division-students-pumped-for-nutcracker`}>
+						<a className='link-style'>
+							<li className='list-style'>
+								<h4>Recreational Division Students Pumped for Nutcracker</h4>
+							</li>
+						</a>
+					</Link>
+					<Link
+						href={`/stories/the-professional-division-delivers-10-performances-to-10-schools-in-five-days`}>
 						<a className='link-style'>
 							<li className='list-style'>
 								<h4>
-									RWB Brings Back One of Canada’s Most Celebrated Literary
-									Achievements to Stage!
+									The Professional Division Delivers 10 Performances to 10
+									Schools in Five Days
 								</h4>
 							</li>
 						</a>
 					</Link>
 					<Link
-						href={`/stories/centre-stage-with-professional-division-student-jane-du-and-her-mom-echo-wei`}>
+						href={`/stories/evelyn-hart-dance-collection-danse-hall-of-fame`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>
-									Centre Stage with Professional Division student Jane Du and
-									her mom Echo Wei
-								</h4>
+								<h4>Evelyn Hart: Dance Collection Danse Hall of Fame</h4>
 							</li>
 						</a>
 					</Link>
 					<Link
-						href={`/stories/whats-the-buzz-about-the-new-season-for-the-recreational-division`}>
+						href={`/stories/powerful-leadership-legacy-of-queen-elizabeth-ii`}>
 						<a className='link-style'>
 							<li className='list-style'>
-								<h4>
-									What’s the Buzz about the New Season for the Recreational
-									Division…
-								</h4>
-							</li>
-						</a>
-					</Link>
-					<Link
-						href={`/stories/why-more-canadians-are-leaving-a-gift-to-charity-in-their-wills`}>
-						<a className='link-style'>
-							<li className='list-style'>
-								<h4>
-									Why more Canadians are leaving a gift to charity in their
-									Wills
-								</h4>
+								<h4>Powerful Leadership Legacy of Queen Elizabeth II</h4>
 							</li>
 						</a>
 					</Link>
